@@ -1,0 +1,278 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.rowFlex {
+	background-color: orangered;
+	
+	position: calc(100, 100, 10);
+	display: flex;
+}
+.rowFlex img {
+	padding: 10px;
+	
+}
+.rowFlex nav ul li {
+	display: inline-block;
+	position: relative;
+   	width: 5fr;
+   	font-size: 25px;
+   	text-align: center;
+	padding-top: 100px;
+		
+}
+.rowFlex ul ul li {
+ 	width: 200px;
+  	padding: 5px;
+	display:block;
+   	background-color: rgba(255,255,255, 0.9);
+   	list-style: none;
+   	top: 10px;
+
+}
+.rowFlex ul ul {
+	display: none;
+	
+
+}
+.rowFlex ul li:hover ul {
+	position: absolute;
+  	display: block;
+   	color: orangered;
+	font-size: 50px;
+	list-style: none;
+}
+
+
+.parallax{
+	background-image: url("../assets/img/background-essen.jpg");
+	height: 700px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 130px;
+	position: static;
+}
+.parallax h4{
+	font-size: 3rem; 
+	text-align: center; 
+	background-color: rgba(255,255,255, 0.6);
+	padding-top: 20px;
+	margin-top: 50px;
+	position: calc(100, 100, 7);
+	height: 60px;
+}
+.parallax p{
+	font-size: 2rem; 
+	position: calc(100, 100, 7);
+	text-align: center; 
+	background-color: rgba(255,255,255, 0.6);
+	padding: 3px;
+	font-style: oblique;
+}
+
+.sectionFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	height: 500px;
+	border: 1px solid black;
+	width: 100%;
+	align-items: stretch;
+	flex-wrap: wrap;
+	align-content: stretch;
+	background-color: rgb(185, 95, 34);
+	font-size: 20px;
+	text-align: center;
+	font-weight: 700;
+}
+.sectionFlex p {
+	background-color: rgb(73, 73, 51); 
+	width: 20%; 
+	padding: 30px; 
+	margin: 20px;
+}
+
+
+
+
+
+.gridContainer{
+	display: grid;
+	grid-template-areas: 
+	"header header"
+	"encabezado encabezado"
+	"imgTxtInformativo textoInformativo"
+	"footer footer";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50px 1fr auto 120px;
+	background-color: rgba(219, 60, 2, 0.685);
+}
+section.encabezado{
+	grid-area: encabezado;
+	color: black;
+	background-color: rgba(255,255,255, 0.2);
+	
+}
+
+section.textoInformativo{
+	grid-area: textoInformativo;
+	text-align: justify;
+	font-size: 30px;
+	margin: 30px;
+}
+
+section.imgTxtInformativo{
+	grid-area: imgTxtInformativo;
+	width: 100%;
+}
+
+
+section.footer{
+	grid-area: footer;
+	display: flex;
+	justify-content: space-around;
+	
+}
+.footer {
+	width: 100%;
+	position: -webkit-sticky;
+	text-align: center;
+	font-size: 25px;
+	font-family: normal;
+	height: 5rem;
+	background-color: rgb(41, 0, 0);
+}
+.footer ul li{
+	display: inline-block;
+	padding-inline: 80px;
+	padding-top: 20px;
+}
+
+.contacto{
+	display: flex;
+	align-self: center;
+	background-color:  rgba(255, 141, 47);
+	color: black;
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+.contacto label{
+	display: block;
+	padding: 20px;
+}
+.contacto h4{
+	font-size: 30px;
+	background-color: rgba(255,255,255, 0.2);
+	padding: 2%;
+}
+
+/* medias queries */
+/*vista desktop */
+@media screen and (min-width:1200px){
+	.encabezado{
+		font-size: 50px;
+		text-align: center;
+		color: rgba(0, 0, 0, 0.973);
+	}
+}
+/* vista entre desktop y mobile */
+@media all and (min-width:761px) and (max-width:1200px){
+	.gridContainer{
+	display: grid;
+	grid-template-areas: 
+	"header header"
+	"encabezado encabezado"
+	"imgTxtInformativo textoInformativo"
+	"footer footer";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50px 1fr auto 140px;
+	background-color: rgba(255, 141, 47);
+	}
+	.footer{
+		display: inline-block;
+		width: 3fr;
+		font-size: 18px;
+		text-align: center;
+		padding-top: 1px;
+		height: 100%;
+	}
+	.sectionFlex{
+		height: 100%;
+		width: 100%;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	.parallax{
+		height: 200px;
+		padding-top: 10px;
+		position: static;
+	}
+	.parallax p{
+		font-size: 20px; 
+		padding: 1px;
+	
+	}
+	.parallax h4{
+		font-size: 30px; 
+		padding-top: 5px;
+		margin-top: 30px;
+	}
+}
+/*vista mobile*/
+@media screen and (min-width:0px) and (max-width:760px){
+	.gridContainer{
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"encabezado"
+	"textoInformativo"
+	"imgTxtInformativo"
+	"footer";
+	grid-template-columns: 100%;
+	grid-template-rows: 35px 1fr auto 350px auto;
+	background-color: rgba(255, 141, 47);
+	
+	}
+	.encabezado{
+		text-align: center;
+		padding: 15px;
+	}
+	.footer{
+		height: 100%;
+	}
+	.rowFlex nav ul li {
+		display: block;
+		position: relative;
+		font-size: 18px;
+		text-align: center;
+		padding-top: 11px;
+		text-align: left;
+	}
+	.sectionFlex{
+		height: 100%;
+		width: 100%;
+		font-size: 10px;
+		font-weight: 600;
+	}
+	.parallax{
+		height: 150px;
+		padding-top: 5px;
+		position: static;
+	}
+	.parallax p{
+		font-size: 15px; 
+		padding: 1px;
+	
+	}
+	.parallax h4{
+		font-size: 25px; 
+		padding-top: 5px;
+		margin-top: 30px;
+	}
+
+}
