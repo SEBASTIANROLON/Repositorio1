@@ -1,0 +1,56 @@
+.rowFlex :hover{
+	background-color: rgb(236, 139, 93);
+	width: auto;
+}
+.rowFlex img {
+	animation-name: logo;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 2.5s;
+	animation-delay: 0ms;
+	overflow: hidden;
+}
+@keyframes logo{
+	100%{
+		transform: scale(1);
+	}
+	0%{
+		transform: scale(1.1,1);
+	}
+}
+
+.sectionFlex{
+	background: linear-gradient(100deg, rgba(68, 25, 15, 0.978) 20%, rgba(139, 51, 0, 0.829) 51%, rgb(201, 142, 126) 100%);
+
+}
+.sectionFlex p {
+	background: linear-gradient(to right, rgb(199, 187, 187), rgb(173, 98, 0)); 
+	border: 1px solid black;
+}
+
+section.encabezado{
+	background: linear-gradient(267deg, rgba(245,72,31,0.9780287114845938) 0%, rgba(252,243,138,1) 51%, rgba(144,43,15,1) 100%);
+}
+
+section.imgTxtInformativo{
+	animation-name: imgtxt;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 0.5s;
+	animation-delay: 0ms;
+		
+}
+@keyframes imgtxt{
+	0%{
+		transform: scale(0.95);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+.footer :hover{
+	background-color: rgb(81, 0, 0, 0.5);
+	width: auto;
+}
+
